@@ -37,7 +37,7 @@ class AuthController extends Controller
             [
                 'status' => true,
                 'message' => __('User Registered, Please Check our Mail'),
-                'data' => new UserResource($user),
+                'user' => new UserResource($user),
                 'token' => $token->plainTextToken
             ]
         );
@@ -61,7 +61,7 @@ class AuthController extends Controller
             [
                 'status' => true,
                 'message' => __('You are Logged'),
-                'data' => new UserResource(Auth::user()),
+                'user' => new UserResource(Auth::user()),
                 'token' => $token->plainTextToken
             ]
         );

@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\ResetPasswordRequest;
 use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
@@ -23,7 +24,7 @@ class PasswordController extends Controller
 
     /**
      * @param ForgotPasswordRequest $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      * @throws ValidationException
      * @unauthenticated
      */
@@ -50,7 +51,7 @@ class PasswordController extends Controller
 
     /**
      * @param ResetPasswordRequest $request
-     * @return Application|ResponseFactory|Response
+     * @return JsonResponse
      * @unauthenticated
      */
     public function reset(ResetPasswordRequest $request)
@@ -71,13 +72,13 @@ class PasswordController extends Controller
         );
 
         if ($status == Password::PASSWORD_RESET) {
-            return response([
+            return response()->json([
                 'status' => true,
                 'message' => __($status)
             ]);
         }
 
-        return response([
+        return response()->json([
             'status' => false,
             'message' => __($status)
         ], 500);

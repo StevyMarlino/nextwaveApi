@@ -9,8 +9,8 @@
         }
     ],
     "info": {
-        "name": "Synactd Api",
-        "_postman_id": "853ed50f-0a1e-4e75-9ed3-e2d639633a91",
+        "name": "Next Wave Api",
+        "_postman_id": "78b1346a-bc12-4f69-a522-9325a0f1a807",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -81,13 +81,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "architecto",
+                                    "value": "quas",
                                     "description": "The ID of the verify email."
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "earum",
+                                    "value": "officiis",
                                     "description": ""
                                 }
                             ]
@@ -129,7 +129,7 @@
                     ]
                 },
                 {
-                    "name": "api\/user\/auth",
+                    "name": "Display the specified resource.",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -195,7 +195,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"frami.ken@example.com\",\"password\":\"itaque\"}"
+                            "raw": "{\"email\":\"kuvalis.bulah@example.com\",\"password\":\"expedita\"}"
                         },
                         "description": "",
                         "auth": {
@@ -226,7 +226,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"last_name\":\"tgbbrrfmlmvzjppvkwhqdgtrzor\",\"first_name\":\"hdkccdgaktmdakyuuzftzxuuwkzilfkpiefadxwejinzulkhtnecavsumejywanydffktlacrgyihqbohopqcklhgzyhnfxethfhynginvaylwbikitpgbqabtxuzlthaa\",\"phone\":\"rp\",\"email\":\"hwbatesrovdvbowsxolqvnreijhmmorfbxykwawmfvucyhmjbcebxjlacdvnicjlnfqdewhfqwcjqiznptyyartkwronnzcwgosqpoxfvnxmkisdmnpitzipwjmdkjfimglfzkpjadsbzslaswyvmjkkochawxz\",\"password\":\"nostrum\"}"
+                            "raw": "{\"last_name\":\"osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf\",\"first_name\":\"zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto\",\"phone\":\"yw\",\"email\":\"khtykhcwahtjyjcxzchlphdkcyqf\",\"password\":\"voluptatibus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -257,7 +257,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"meda.prohaska@example.com\"}"
+                            "raw": "{\"email\":\"zboncak.jordon@example.com\"}"
                         },
                         "description": "",
                         "auth": {
@@ -288,12 +288,74 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"token\":\"et\",\"email\":\"camryn.olson@example.org\",\"password\":\"laborum\"}"
+                            "raw": "{\"token\":\"harum\",\"email\":\"stroman.johan@example.com\",\"password\":\"accusamus\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user-update-info",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user-update-info"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs\",\"last_name\":\"yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut\",\"first_name\":\"qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog\",\"phone\":\"rhovkaf\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/change-avatar",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/change-avatar",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/change-avatar"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
                     },
                     "response": []
                 }

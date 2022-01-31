@@ -24,9 +24,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('email/verification-notification', [EmailVerificationController::class, 'sendVerificationEmail']);
     Route::get('verify-email/{id}/{hash}', [EmailVerificationController::class, 'verify'])->name('verification.verify');
 
-    Route::get('/user/auth', function (Request $request) {
-        return response()->json(new \App\Http\Resources\UserResource($request->user()));
-    });
+    Route::get('/user/auth', [\App\Http\Controllers\UserController::class, 'show']);
+    Route::post('/user-update-info', [\App\Http\Controllers\UserController::class, 'update']);
+    Route::put('change-avatar', [\App\Http\Controllers\UserController::class, 'ChangeAvatar']);
 
 });
 

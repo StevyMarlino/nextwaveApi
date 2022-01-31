@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
 
-class RegisterRequest extends FormRequest
+class UserUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,12 +25,12 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'last_name' => 'required|string|max:255',
-            'first_name' => 'required|string|max:255',
-            'phone' => 'required|string|max:11',
-            'image' => 'nullable',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => ['required', 'confirmed', Password::defaults()],
+            'email' => 'nullable|string|email|max:255',
+            'last_name' => 'nullable|string|max:255',
+            'first_name' => 'nullable|string|max:255',
+            'phone' => 'nullable|string|max:11',
+            'password' => ['nullable', Password::defaults()],
+            'current_password' => ['nullable', Password::defaults()],
         ];
     }
 }

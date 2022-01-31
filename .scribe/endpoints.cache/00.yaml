@@ -57,14 +57,14 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: architecto
+        example: quas
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: earum
+        example: officiis
         type: string
         custom: []
     queryParameters: []
@@ -84,7 +84,7 @@ endpoints:
       - GET
     uri: api/user/auth
     metadata:
-      title: ''
+      title: 'Display the specified resource.'
       description: ''
       authenticated: true
       custom: []
@@ -124,14 +124,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: frami.ken@example.com
+        example: kuvalis.bulah@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: itaque
+        example: expedita
         type: string
         custom: []
     responses: []
@@ -155,28 +155,21 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: tgbbrrfmlmvzjppvkwhqdgtrzor
+        example: osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf
         type: string
         custom: []
       first_name:
         name: first_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hdkccdgaktmdakyuuzftzxuuwkzilfkpiefadxwejinzulkhtnecavsumejywanydffktlacrgyihqbohopqcklhgzyhnfxethfhynginvaylwbikitpgbqabtxuzlthaa
+        example: zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto
         type: string
         custom: []
       phone:
         name: phone
         description: 'Must not be greater than 11 characters.'
         required: true
-        example: rp
-        type: string
-        custom: []
-      poste:
-        name: poste
-        description: ''
-        required: false
-        example: null
+        example: yw
         type: string
         custom: []
       image:
@@ -190,14 +183,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: hwbatesrovdvbowsxolqvnreijhmmorfbxykwawmfvucyhmjbcebxjlacdvnicjlnfqdewhfqwcjqiznptyyartkwronnzcwgosqpoxfvnxmkisdmnpitzipwjmdkjfimglfzkpjadsbzslaswyvmjkkochawxz
+        example: khtykhcwahtjyjcxzchlphdkcyqf
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: nostrum
+        example: voluptatibus
         type: string
         custom: []
     responses: []
@@ -221,7 +214,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: meda.prohaska@example.com
+        example: zboncak.jordon@example.com
         type: string
         custom: []
     responses: []
@@ -245,22 +238,107 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: et
+        example: harum
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: camryn.olson@example.org
+        example: stroman.johan@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: laborum
+        example: accusamus
         type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/user-update-info
+    metadata:
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut
+        type: string
+        custom: []
+      first_name:
+        name: first_name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: 'Must not be greater than 11 characters.'
+        required: false
+        example: rhovkaf
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      current_password:
+        name: current_password
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/change-avatar
+    metadata:
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 3072 kilobytes.'
+        required: false
+        example: null
+        type: file
         custom: []
     responses: []
     responseFields: []

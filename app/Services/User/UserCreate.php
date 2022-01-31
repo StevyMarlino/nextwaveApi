@@ -16,7 +16,6 @@ class UserCreate
             'last_name' => $data['last_name'],
             'first_name' => $data['first_name'],
             'phone' => $data['phone'],
-            'poste' => $data['poste'],
             'is_active' => true,
             'image' => $data['image'],
             'email' => $data['email'],

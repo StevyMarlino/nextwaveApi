@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: 'Synactd Api'
+  title: 'Next Wave Api'
   description: ''
   version: 1.0.0
 servers:
@@ -111,7 +111,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the verify email.'
-        example: architecto
+        example: quas
         required: true
         schema:
           type: string
@@ -119,13 +119,13 @@ paths:
         in: path
         name: hash
         description: ''
-        example: earum
+        example: officiis
         required: true
         schema:
           type: string
   /api/user/auth:
     get:
-      summary: ''
+      summary: 'Display the specified resource.'
       description: ''
       parameters:
         -
@@ -196,11 +196,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: frami.ken@example.com
+                  example: kuvalis.bulah@example.com
                 password:
                   type: string
                   description: ''
-                  example: itaque
+                  example: expedita
               required:
                 - email
                 - password
@@ -237,19 +237,15 @@ paths:
                 last_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: tgbbrrfmlmvzjppvkwhqdgtrzor
+                  example: osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf
                 first_name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hdkccdgaktmdakyuuzftzxuuwkzilfkpiefadxwejinzulkhtnecavsumejywanydffktlacrgyihqbohopqcklhgzyhnfxethfhynginvaylwbikitpgbqabtxuzlthaa
+                  example: zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto
                 phone:
                   type: string
                   description: 'Must not be greater than 11 characters.'
-                  example: rp
-                poste:
-                  type: string
-                  description: ''
-                  example: null
+                  example: yw
                 image:
                   type: string
                   description: ''
@@ -257,11 +253,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: hwbatesrovdvbowsxolqvnreijhmmorfbxykwawmfvucyhmjbcebxjlacdvnicjlnfqdewhfqwcjqiznptyyartkwronnzcwgosqpoxfvnxmkisdmnpitzipwjmdkjfimglfzkpjadsbzslaswyvmjkkochawxz
+                  example: khtykhcwahtjyjcxzchlphdkcyqf
                 password:
                   type: string
                   description: ''
-                  example: nostrum
+                  example: voluptatibus
               required:
                 - last_name
                 - first_name
@@ -301,7 +297,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: meda.prohaska@example.com
+                  example: zboncak.jordon@example.com
               required:
                 - email
       security: []
@@ -337,20 +333,120 @@ paths:
                 token:
                   type: string
                   description: ''
-                  example: et
+                  example: harum
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: camryn.olson@example.org
+                  example: stroman.johan@example.com
                 password:
                   type: string
                   description: ''
-                  example: laborum
+                  example: accusamus
               required:
                 - token
                 - email
                 - password
       security: []
+  /api/user-update-info:
+    post:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs
+                last_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut
+                first_name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog
+                phone:
+                  type: string
+                  description: 'Must not be greater than 11 characters.'
+                  example: rhovkaf
+                password:
+                  type: string
+                  description: ''
+                  example: null
+                current_password:
+                  type: string
+                  description: ''
+                  example: null
+  /api/change-avatar:
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: multipart/form-data
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                image:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 3072 kilobytes.'
 tags:
   -
     name: Endpoints
