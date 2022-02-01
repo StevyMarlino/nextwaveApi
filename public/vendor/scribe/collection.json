@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Next Wave Api",
-        "_postman_id": "78b1346a-bc12-4f69-a522-9325a0f1a807",
+        "_postman_id": "6501b54a-52d1-4a15-b683-84e5db150dbe",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -81,13 +81,13 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quas",
+                                    "value": "minima",
                                     "description": "The ID of the verify email."
                                 },
                                 {
                                     "id": "hash",
                                     "key": "hash",
-                                    "value": "officiis",
+                                    "value": "nemo",
                                     "description": ""
                                 }
                             ]
@@ -195,7 +195,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"kuvalis.bulah@example.com\",\"password\":\"expedita\"}"
+                            "raw": "{\"email\":\"joanne56@example.org\",\"password\":\"velit\"}"
                         },
                         "description": "",
                         "auth": {
@@ -226,7 +226,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"last_name\":\"osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf\",\"first_name\":\"zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto\",\"phone\":\"yw\",\"email\":\"khtykhcwahtjyjcxzchlphdkcyqf\",\"password\":\"voluptatibus\"}"
+                            "raw": "{\"last_name\":\"qhahwtgsdtzpxiklmqiijnvyehkjncsekdauvmuqwjaxkwwzyyvfuyqanhyzvypfkdqhegsabckjjqwtzjcptkatwkhrhbywdxzkkmfxomjrhyhlykbfuzfjhytncxodjrgpnggyxwl\",\"first_name\":\"gwjbbieyaavvovfpvnjegynbrtqdbguhzijtgibdmghm\",\"phone\":\"hz\",\"email\":\"tflfvocuyildllzblbzesamzwitgiunlsetrnaktfupzctrtbhkwlflfrweucmlhsfddunkbfwkbpghgxwgslacmxsshakhwsdvoqwlxamhkissqjutxzryjybyvrlonrpyappezl\",\"password\":\"eos\"}"
                         },
                         "description": "",
                         "auth": {
@@ -257,7 +257,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"zboncak.jordon@example.com\"}"
+                            "raw": "{\"email\":\"kunde.leila@example.net\"}"
                         },
                         "description": "",
                         "auth": {
@@ -288,7 +288,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"token\":\"harum\",\"email\":\"stroman.johan@example.com\",\"password\":\"accusamus\"}"
+                            "raw": "{\"token\":\"soluta\",\"email\":\"marvin.ibrahim@example.net\",\"password\":\"molestias\"}"
                         },
                         "description": "",
                         "auth": {
@@ -319,7 +319,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs\",\"last_name\":\"yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut\",\"first_name\":\"qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog\",\"phone\":\"rhovkaf\"}"
+                            "raw": "{\"email\":\"xwjsiijfokmsendtuqqpkmrbrxoeidldnfjrkwlfbijagqpjgcedtexzlvhxvudpehrmqeqbvqphpehrxlnvqsbsufqxbhhunzvpqhqpqcdvziohenirzuspddgmdihlzaiwaakequlcfwytoxkscwzmeiiwbzohvfjybivainjhnmvnfntgxdjwqlfukiowinehmcirwmczfg\",\"last_name\":\"xlcevvyzqgbfuotuteobrqaodmhzgnvdshrckyvykusxdxhgpnkwssrszaequawgycrocbsnehdllsnlwxylhebip\",\"first_name\":\"ljdeuykzcimbetgzpccgdkwxdctnjckrjlwleduyrlyvbaxdhjxkuivfucjgzuqyrrxblhbkmegrizaxmedxsiixqyjgjvmzicqjvfhumdlfkflvnvwihsqpwinozgriwyqybeoawftcoijwjkcalwcp\",\"phone\":\"ildc\"}"
                         },
                         "description": ""
                     },

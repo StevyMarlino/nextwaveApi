@@ -8,8 +8,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
-    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+    <link rel="stylesheet" href="{{ asset("vendor/scribe/css/theme-default.style.css") }}" media="screen">
+    <link rel="stylesheet" href="{{ asset("vendor/scribe/css/theme-default.print.css") }}" media="print">
 
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 
@@ -32,9 +32,9 @@
         var useCsrf = Boolean(1);
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
-    <script src="../docs/js/tryitout-3.21.0.js"></script>
+    <script src="{{ asset("vendor/scribe/js/tryitout-3.21.0.js") }}"></script>
 
-    <script src="../docs/js/theme-default-3.21.0.js"></script>
+    <script src="{{ asset("vendor/scribe/js/theme-default-3.21.0.js") }}"></script>
 
 </head>
 
@@ -43,7 +43,7 @@
 <a href="#" id="nav-button">
     <span>
         MENU
-        <img src="../docs/images/navbar.png" alt="navbar-image" />
+        <img src="{{ asset("vendor/scribe/images/navbar.png") }}" alt="navbar-image" />
     </span>
 </a>
 <div class="tocify-wrapper">
@@ -115,12 +115,12 @@
             </div>
 
             <ul class="toc-footer" id="toc-footer">
-                            <li><a href="../docs/collection.json">View Postman collection</a></li>
-                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="{{ route("scribe.postman") }}">View Postman collection</a></li>
+                            <li><a href="{{ route("scribe.openapi") }}">View OpenAPI spec</a></li>
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: January 16 2022</li>
+        <li>Last updated: February 1 2022</li>
     </ul>
 </div>
 
@@ -399,7 +399,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/verify-email/quas/officiis" \
+    --get "http://127.0.0.1:8000/api/verify-email/et/vel" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -407,7 +407,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/verify-email/quas/officiis"
+    "http://127.0.0.1:8000/api/verify-email/et/vel"
 );
 
 const headers = {
@@ -425,7 +425,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://127.0.0.1:8000/api/verify-email/quas/officiis',
+    'http://127.0.0.1:8000/api/verify-email/et/vel',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -442,7 +442,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/verify-email/quas/officiis'
+url = 'http://127.0.0.1:8000/api/verify-email/et/vel'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -526,7 +526,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="quas"
+               value="et"
                data-component="url" hidden>
     <br>
 <p>The ID of the verify email.</p>
@@ -536,7 +536,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="hash"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="officiis"
+               value="vel"
                data-component="url" hidden>
     <br>
 
@@ -697,8 +697,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"kuvalis.bulah@example.com\",
-    \"password\": \"expedita\"
+    \"email\": \"doyle.may@example.com\",
+    \"password\": \"soluta\"
 }"
 </code></pre></div>
 
@@ -714,8 +714,8 @@ const headers = {
 };
 
 let body = {
-    "email": "kuvalis.bulah@example.com",
-    "password": "expedita"
+    "email": "doyle.may@example.com",
+    "password": "soluta"
 };
 
 fetch(url, {
@@ -735,8 +735,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'kuvalis.bulah@example.com',
-            'password' =&gt; 'expedita',
+            'email' =&gt; 'doyle.may@example.com',
+            'password' =&gt; 'soluta',
         ],
     ]
 );
@@ -750,8 +750,8 @@ import json
 
 url = 'http://127.0.0.1:8000/api/login'
 payload = {
-    "email": "kuvalis.bulah@example.com",
-    "password": "expedita"
+    "email": "doyle.may@example.com",
+    "password": "soluta"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -810,7 +810,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="kuvalis.bulah@example.com"
+               value="doyle.may@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -820,7 +820,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="expedita"
+               value="soluta"
                data-component="body" hidden>
     <br>
 
@@ -844,11 +844,11 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"last_name\": \"osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf\",
-    \"first_name\": \"zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto\",
-    \"phone\": \"yw\",
-    \"email\": \"khtykhcwahtjyjcxzchlphdkcyqf\",
-    \"password\": \"voluptatibus\"
+    \"last_name\": \"xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm\",
+    \"first_name\": \"jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk\",
+    \"phone\": \"gigakw\",
+    \"email\": \"ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer\",
+    \"password\": \"ut\"
 }"
 </code></pre></div>
 
@@ -864,11 +864,11 @@ const headers = {
 };
 
 let body = {
-    "last_name": "osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf",
-    "first_name": "zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto",
-    "phone": "yw",
-    "email": "khtykhcwahtjyjcxzchlphdkcyqf",
-    "password": "voluptatibus"
+    "last_name": "xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm",
+    "first_name": "jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk",
+    "phone": "gigakw",
+    "email": "ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer",
+    "password": "ut"
 };
 
 fetch(url, {
@@ -888,11 +888,11 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'last_name' =&gt; 'osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf',
-            'first_name' =&gt; 'zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto',
-            'phone' =&gt; 'yw',
-            'email' =&gt; 'khtykhcwahtjyjcxzchlphdkcyqf',
-            'password' =&gt; 'voluptatibus',
+            'last_name' =&gt; 'xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm',
+            'first_name' =&gt; 'jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk',
+            'phone' =&gt; 'gigakw',
+            'email' =&gt; 'ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer',
+            'password' =&gt; 'ut',
         ],
     ]
 );
@@ -906,11 +906,11 @@ import json
 
 url = 'http://127.0.0.1:8000/api/register'
 payload = {
-    "last_name": "osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf",
-    "first_name": "zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto",
-    "phone": "yw",
-    "email": "khtykhcwahtjyjcxzchlphdkcyqf",
-    "password": "voluptatibus"
+    "last_name": "xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm",
+    "first_name": "jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk",
+    "phone": "gigakw",
+    "email": "ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer",
+    "password": "ut"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -969,7 +969,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-register"
-               value="osioacduxthfekegjzzrpwfopszsntcbneilssolekyoskkcrahvxtxreceienslytjqjjgkubcvcsncfzjkkjcmczlaoqyhtxmoxmnmlkqoyjqcrsgnaftfttnfzmomweffsjohiaznrvceuakibcnbzqbfpuvgcwtkedpwyjidfjjqqynfpsddxwkbckqxnfgwzwofstyemvnrhkymadpvtvwbjlqjxosdnwtessskgvthpxnyazriuyf"
+               value="xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -979,7 +979,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-register"
-               value="zfsoljuimaregstvbbucfcjluqcmzlmsgxngwdcaxzto"
+               value="jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -989,7 +989,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-register"
-               value="yw"
+               value="gigakw"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 11 characters.</p>
@@ -1009,7 +1009,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-register"
-               value="khtykhcwahtjyjcxzchlphdkcyqf"
+               value="ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1019,7 +1019,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-register"
-               value="voluptatibus"
+               value="ut"
                data-component="body" hidden>
     <br>
 
@@ -1043,7 +1043,7 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"zboncak.jordon@example.com\"
+    \"email\": \"pfranecki@example.net\"
 }"
 </code></pre></div>
 
@@ -1059,7 +1059,7 @@ const headers = {
 };
 
 let body = {
-    "email": "zboncak.jordon@example.com"
+    "email": "pfranecki@example.net"
 };
 
 fetch(url, {
@@ -1079,7 +1079,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'zboncak.jordon@example.com',
+            'email' =&gt; 'pfranecki@example.net',
         ],
     ]
 );
@@ -1093,7 +1093,7 @@ import json
 
 url = 'http://127.0.0.1:8000/api/forgot-password'
 payload = {
-    "email": "zboncak.jordon@example.com"
+    "email": "pfranecki@example.net"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1152,7 +1152,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-forgot-password"
-               value="zboncak.jordon@example.com"
+               value="pfranecki@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1176,9 +1176,9 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"token\": \"harum\",
-    \"email\": \"stroman.johan@example.com\",
-    \"password\": \"accusamus\"
+    \"token\": \"iure\",
+    \"email\": \"eglover@example.org\",
+    \"password\": \"quisquam\"
 }"
 </code></pre></div>
 
@@ -1194,9 +1194,9 @@ const headers = {
 };
 
 let body = {
-    "token": "harum",
-    "email": "stroman.johan@example.com",
-    "password": "accusamus"
+    "token": "iure",
+    "email": "eglover@example.org",
+    "password": "quisquam"
 };
 
 fetch(url, {
@@ -1216,9 +1216,9 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'token' =&gt; 'harum',
-            'email' =&gt; 'stroman.johan@example.com',
-            'password' =&gt; 'accusamus',
+            'token' =&gt; 'iure',
+            'email' =&gt; 'eglover@example.org',
+            'password' =&gt; 'quisquam',
         ],
     ]
 );
@@ -1232,9 +1232,9 @@ import json
 
 url = 'http://127.0.0.1:8000/api/reset-password'
 payload = {
-    "token": "harum",
-    "email": "stroman.johan@example.com",
-    "password": "accusamus"
+    "token": "iure",
+    "email": "eglover@example.org",
+    "password": "quisquam"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1293,7 +1293,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-reset-password"
-               value="harum"
+               value="iure"
                data-component="body" hidden>
     <br>
 
@@ -1303,7 +1303,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-reset-password"
-               value="stroman.johan@example.com"
+               value="eglover@example.org"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1313,7 +1313,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-reset-password"
-               value="accusamus"
+               value="quisquam"
                data-component="body" hidden>
     <br>
 
@@ -1339,10 +1339,10 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs\",
-    \"last_name\": \"yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut\",
-    \"first_name\": \"qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog\",
-    \"phone\": \"rhovkaf\"
+    \"email\": \"wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh\",
+    \"last_name\": \"toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot\",
+    \"first_name\": \"nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk\",
+    \"phone\": \"aiihykxmt\"
 }"
 </code></pre></div>
 
@@ -1359,10 +1359,10 @@ const headers = {
 };
 
 let body = {
-    "email": "vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs",
-    "last_name": "yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut",
-    "first_name": "qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog",
-    "phone": "rhovkaf"
+    "email": "wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh",
+    "last_name": "toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot",
+    "first_name": "nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk",
+    "phone": "aiihykxmt"
 };
 
 fetch(url, {
@@ -1383,10 +1383,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs',
-            'last_name' =&gt; 'yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut',
-            'first_name' =&gt; 'qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog',
-            'phone' =&gt; 'rhovkaf',
+            'email' =&gt; 'wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh',
+            'last_name' =&gt; 'toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot',
+            'first_name' =&gt; 'nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk',
+            'phone' =&gt; 'aiihykxmt',
         ],
     ]
 );
@@ -1400,10 +1400,10 @@ import json
 
 url = 'http://127.0.0.1:8000/api/user-update-info'
 payload = {
-    "email": "vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs",
-    "last_name": "yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut",
-    "first_name": "qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog",
-    "phone": "rhovkaf"
+    "email": "wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh",
+    "last_name": "toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot",
+    "first_name": "nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk",
+    "phone": "aiihykxmt"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1471,7 +1471,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-user-update-info"
-               value="vpbzyheefhangbodkszrqrxkdklaxfqednybscozeszwxtfvgnvwwieuzzddwakhxdwxxinesevudcvqnhrzdgviainanljtwamomgqxapbfvbdxdlhkgjftvyzxcprfvhnrpyqhnieopjzqubukxyueuzoevcxs"
+               value="wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1481,7 +1481,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-user-update-info"
-               value="yshhxqeacxhdymkstuibaloylsjtyrmkvvflswideigvxgjgdwqvgduut"
+               value="toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1491,7 +1491,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-user-update-info"
-               value="qpemppcdcszikmhunhwxfvjtsasoltvwktqxiqkfybesgrmdtcyzpawelwcrjohplvbxttbnbzedjxcaoxcbaqxbmotejufnvaeyuabatoghnuuwmojmorhbyxqzzbog"
+               value="nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1501,7 +1501,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-user-update-info"
-               value="rhovkaf"
+               value="aiihykxmt"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 11 characters.</p>
@@ -1546,7 +1546,7 @@ response.json()</code></pre></div>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "image=@C:\Users\hp\AppData\Local\Temp\php6533.tmp" </code></pre></div>
+    --form "image=@C:\Users\hp\AppData\Local\Temp\php8E6F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1583,7 +1583,7 @@ $response = $client-&gt;put(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php6533.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php8E6F.tmp', 'r')
             ],
         ],
     ]
@@ -1598,7 +1598,7 @@ import json
 
 url = 'http://127.0.0.1:8000/api/change-avatar'
 files = {
-  'image': open('C:\Users\hp\AppData\Local\Temp\php6533.tmp', 'rb')
+  'image': open('C:\Users\hp\AppData\Local\Temp\php8E6F.tmp', 'rb')
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
