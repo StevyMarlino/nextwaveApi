@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::redirect('/','/documentation');
-
-Route::get('/documentation', function () {
+Route::get('/', function () {
     return view('scribe.index');
 });
