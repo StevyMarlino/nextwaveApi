@@ -20,7 +20,7 @@ class AuthControllerTest extends TestCase
         /**
          * Create a user
          */
-        $user = User::factory()->create($this->data());
+        $user = User::factory()->create($this->dataLogin());
 
         $payload = ['email' => 'stevymarlino@user.com', 'password' => 'password'];
 
@@ -61,7 +61,7 @@ class AuthControllerTest extends TestCase
         /**
          * Create a user
          */
-        $user = User::factory()->create($this->data());
+        $user = User::factory()->create($this->dataLogin());
 
         /**
          * we send lose data
@@ -82,18 +82,7 @@ class AuthControllerTest extends TestCase
 
     public function testRegister()
     {
-        $payload = [
-            'first_name' => 'stevy',
-            'last_name' => 'joe',
-            'phone' => '237694480473',
-            'email' => 'stevyjoe@gmail.com',
-            'image' => '',
-            'password' => 'password',
-            'password_confirmation' => 'password'
-
-        ];
-
-        $this->postJson('/api/register',$payload)
+        $this->postJson('/api/register', $this->dataRegister())
             ->assertStatus(201)
             ->assertSessionHasNoErrors();
 
@@ -102,15 +91,65 @@ class AuthControllerTest extends TestCase
 
     }
 
+    public function testLogout()
+    {
+
+        /**
+         * Create a user
+         */
+        $user = User::factory()->create($this->dataLogin());
+
+        $payload = ['email' => 'stevymarlino@user.com', 'password' => 'password'];
+
+        /**
+         * Now we contact the end point to login
+         */
+        $response = $this->postJson('api/login', $payload);
+
+        // Now we logout the user just login
+        $logout = $this->withHeader('Authorization', 'Bearer ' . $response['token'])
+            ->postJson('api/logout')
+        ->assertStatus(200);
+
+
+        /**
+         * no errors in session
+         */
+        $logout->assertSessionHasNoErrors();
+
+        /**
+         * we attest that we have this structure in the response Json
+         */
+        $logout->assertJsonStructure([
+            "status",
+            "message",
+        ]);
+
+    }
+
     /**
      * @return array
      */
-    private function data()
+    private function dataLogin()
     {
         return [
             'email' => 'stevymarlino@user.com',
             'password' => bcrypt('password'),
             'email_verified_at' => now(),
+        ];
+    }
+
+    private function dataRegister()
+    {
+        return $payload = [
+            'first_name' => 'stevy',
+            'last_name' => 'joe',
+            'phone' => '237694480473',
+            'email' => 'stevyjoe@gmail.com',
+            'image' => '',
+            'password' => 'password',
+            'password_confirmation' => 'password'
+
         ];
     }
 }
