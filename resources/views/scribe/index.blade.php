@@ -28,7 +28,7 @@
             </style>
 
     <script>
-        var baseUrl = "http://127.0.0.1:8000";
+        var baseUrl = "http://nextwaveapi.communedebokito.com";
         var useCsrf = Boolean(1);
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -120,7 +120,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: February 1 2022</li>
+        <li>Last updated: February 4 2022</li>
     </ul>
 </div>
 
@@ -159,7 +159,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/logout" \
+    "http://nextwaveapi.communedebokito.com/api/logout" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -167,7 +167,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/logout"
+    "http://nextwaveapi.communedebokito.com/api/logout"
 );
 
 const headers = {
@@ -185,7 +185,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/logout',
+    'http://nextwaveapi.communedebokito.com/api/logout',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -202,7 +202,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/logout'
+url = 'http://nextwaveapi.communedebokito.com/api/logout'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -279,7 +279,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/email/verification-notification" \
+    "http://nextwaveapi.communedebokito.com/api/email/verification-notification" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -287,7 +287,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/email/verification-notification"
+    "http://nextwaveapi.communedebokito.com/api/email/verification-notification"
 );
 
 const headers = {
@@ -305,7 +305,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/email/verification-notification',
+    'http://nextwaveapi.communedebokito.com/api/email/verification-notification',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -322,7 +322,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/email/verification-notification'
+url = 'http://nextwaveapi.communedebokito.com/api/email/verification-notification'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -399,7 +399,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/verify-email/et/vel" \
+    --get "http://nextwaveapi.communedebokito.com/api/verify-email/quod/veniam" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -407,7 +407,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/verify-email/et/vel"
+    "http://nextwaveapi.communedebokito.com/api/verify-email/quod/veniam"
 );
 
 const headers = {
@@ -425,7 +425,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://127.0.0.1:8000/api/verify-email/et/vel',
+    'http://nextwaveapi.communedebokito.com/api/verify-email/quod/veniam',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -442,7 +442,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/verify-email/et/vel'
+url = 'http://nextwaveapi.communedebokito.com/api/verify-email/quod/veniam'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -526,7 +526,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="et"
+               value="quod"
                data-component="url" hidden>
     <br>
 <p>The ID of the verify email.</p>
@@ -536,7 +536,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="hash"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="vel"
+               value="veniam"
                data-component="url" hidden>
     <br>
 
@@ -557,7 +557,7 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://127.0.0.1:8000/api/user/auth" \
+    --get "http://nextwaveapi.communedebokito.com/api/user/auth" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -565,7 +565,7 @@ access-control-allow-origin: *
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/user/auth"
+    "http://nextwaveapi.communedebokito.com/api/user/auth"
 );
 
 const headers = {
@@ -583,7 +583,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://127.0.0.1:8000/api/user/auth',
+    'http://nextwaveapi.communedebokito.com/api/user/auth',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -600,7 +600,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/user/auth'
+url = 'http://nextwaveapi.communedebokito.com/api/user/auth'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -693,19 +693,19 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/login" \
+    "http://nextwaveapi.communedebokito.com/api/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"doyle.may@example.com\",
-    \"password\": \"soluta\"
+    \"email\": \"eglover@example.net\",
+    \"password\": \"et\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/login"
+    "http://nextwaveapi.communedebokito.com/api/login"
 );
 
 const headers = {
@@ -714,8 +714,8 @@ const headers = {
 };
 
 let body = {
-    "email": "doyle.may@example.com",
-    "password": "soluta"
+    "email": "eglover@example.net",
+    "password": "et"
 };
 
 fetch(url, {
@@ -728,15 +728,15 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/login',
+    'http://nextwaveapi.communedebokito.com/api/login',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'doyle.may@example.com',
-            'password' =&gt; 'soluta',
+            'email' =&gt; 'eglover@example.net',
+            'password' =&gt; 'et',
         ],
     ]
 );
@@ -748,10 +748,10 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/login'
+url = 'http://nextwaveapi.communedebokito.com/api/login'
 payload = {
-    "email": "doyle.may@example.com",
-    "password": "soluta"
+    "email": "eglover@example.net",
+    "password": "et"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -810,7 +810,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="doyle.may@example.com"
+               value="eglover@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -820,7 +820,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="soluta"
+               value="et"
                data-component="body" hidden>
     <br>
 
@@ -840,22 +840,22 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/register" \
+    "http://nextwaveapi.communedebokito.com/api/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"last_name\": \"xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm\",
-    \"first_name\": \"jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk\",
-    \"phone\": \"gigakw\",
-    \"email\": \"ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer\",
-    \"password\": \"ut\"
+    \"last_name\": \"cnskyjbofbzztqsyjhlfiryphbxpqxpbeldxyhbrbncohbxnrwnywyzkeoeunhihfuirdueypljydnvgmwdakzzktudobxruxopnjeekrbsdtimmxohpvnjjrsfxocaffvqiyehhysztavgsudgsxfixymewogjiaduiofycxvdcqyrfxzmgfyuqkomtoywhpwmkxiikra\",
+    \"first_name\": \"mmryvshkzzdfnbkvfkxcuxjdcuwlrnieluj\",
+    \"phone\": \"\",
+    \"email\": \"ggwgjjirydcmanzormtuxtclqxqejcwssairnfcxxyxmkgrhnckacpgacmrunivysnekhgarsedvinimgtonyaoygumnvgodvsngbotrwvdfrrdnixwzpslxgynmnhvvpjhhtmsdldazfkofcferjqtkcspunahcpxwlrgpvlrddaadpyrgioyrtnufhgbt\",
+    \"password\": \"aut\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/register"
+    "http://nextwaveapi.communedebokito.com/api/register"
 );
 
 const headers = {
@@ -864,11 +864,11 @@ const headers = {
 };
 
 let body = {
-    "last_name": "xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm",
-    "first_name": "jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk",
-    "phone": "gigakw",
-    "email": "ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer",
-    "password": "ut"
+    "last_name": "cnskyjbofbzztqsyjhlfiryphbxpqxpbeldxyhbrbncohbxnrwnywyzkeoeunhihfuirdueypljydnvgmwdakzzktudobxruxopnjeekrbsdtimmxohpvnjjrsfxocaffvqiyehhysztavgsudgsxfixymewogjiaduiofycxvdcqyrfxzmgfyuqkomtoywhpwmkxiikra",
+    "first_name": "mmryvshkzzdfnbkvfkxcuxjdcuwlrnieluj",
+    "phone": "",
+    "email": "ggwgjjirydcmanzormtuxtclqxqejcwssairnfcxxyxmkgrhnckacpgacmrunivysnekhgarsedvinimgtonyaoygumnvgodvsngbotrwvdfrrdnixwzpslxgynmnhvvpjhhtmsdldazfkofcferjqtkcspunahcpxwlrgpvlrddaadpyrgioyrtnufhgbt",
+    "password": "aut"
 };
 
 fetch(url, {
@@ -881,18 +881,18 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/register',
+    'http://nextwaveapi.communedebokito.com/api/register',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'last_name' =&gt; 'xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm',
-            'first_name' =&gt; 'jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk',
-            'phone' =&gt; 'gigakw',
-            'email' =&gt; 'ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer',
-            'password' =&gt; 'ut',
+            'last_name' =&gt; 'cnskyjbofbzztqsyjhlfiryphbxpqxpbeldxyhbrbncohbxnrwnywyzkeoeunhihfuirdueypljydnvgmwdakzzktudobxruxopnjeekrbsdtimmxohpvnjjrsfxocaffvqiyehhysztavgsudgsxfixymewogjiaduiofycxvdcqyrfxzmgfyuqkomtoywhpwmkxiikra',
+            'first_name' =&gt; 'mmryvshkzzdfnbkvfkxcuxjdcuwlrnieluj',
+            'phone' =&gt; '',
+            'email' =&gt; 'ggwgjjirydcmanzormtuxtclqxqejcwssairnfcxxyxmkgrhnckacpgacmrunivysnekhgarsedvinimgtonyaoygumnvgodvsngbotrwvdfrrdnixwzpslxgynmnhvvpjhhtmsdldazfkofcferjqtkcspunahcpxwlrgpvlrddaadpyrgioyrtnufhgbt',
+            'password' =&gt; 'aut',
         ],
     ]
 );
@@ -904,13 +904,13 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/register'
+url = 'http://nextwaveapi.communedebokito.com/api/register'
 payload = {
-    "last_name": "xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm",
-    "first_name": "jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk",
-    "phone": "gigakw",
-    "email": "ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer",
-    "password": "ut"
+    "last_name": "cnskyjbofbzztqsyjhlfiryphbxpqxpbeldxyhbrbncohbxnrwnywyzkeoeunhihfuirdueypljydnvgmwdakzzktudobxruxopnjeekrbsdtimmxohpvnjjrsfxocaffvqiyehhysztavgsudgsxfixymewogjiaduiofycxvdcqyrfxzmgfyuqkomtoywhpwmkxiikra",
+    "first_name": "mmryvshkzzdfnbkvfkxcuxjdcuwlrnieluj",
+    "phone": "",
+    "email": "ggwgjjirydcmanzormtuxtclqxqejcwssairnfcxxyxmkgrhnckacpgacmrunivysnekhgarsedvinimgtonyaoygumnvgodvsngbotrwvdfrrdnixwzpslxgynmnhvvpjhhtmsdldazfkofcferjqtkcspunahcpxwlrgpvlrddaadpyrgioyrtnufhgbt",
+    "password": "aut"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -969,7 +969,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-register"
-               value="xgwmfvqnvlbxxniifmychbrovtscrxarhpjahaobpdoyxlmevpaaturcutgklglbemupagkxgajfqidnnxtrilzyauvpxggdmyndikurivhyoutrvmqcnqpynenadsysqmyvonsgsehbrvuczmgzmrznwm"
+               value="cnskyjbofbzztqsyjhlfiryphbxpqxpbeldxyhbrbncohbxnrwnywyzkeoeunhihfuirdueypljydnvgmwdakzzktudobxruxopnjeekrbsdtimmxohpvnjjrsfxocaffvqiyehhysztavgsudgsxfixymewogjiaduiofycxvdcqyrfxzmgfyuqkomtoywhpwmkxiikra"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -979,7 +979,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-register"
-               value="jsyzrkwisqsisayexogjcotlqbpcerbhxcttysdumzqioobtwuenjkcrrwuquoyqatgjaoqysiklkhlnwpdrtctk"
+               value="mmryvshkzzdfnbkvfkxcuxjdcuwlrnieluj"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -989,10 +989,10 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-register"
-               value="gigakw"
+               value=""
                data-component="body" hidden>
     <br>
-<p>Must not be greater than 11 characters.</p>
+<p>Must not be greater than 12 characters.</p>
         </p>
                 <p>
             <b><code>image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
@@ -1009,7 +1009,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-register"
-               value="ddhjbmnddtzwekdqvquhboykgcdmzzbywatzvlklhpgiudrfhrfhppodhenpetpnpifqqrluegcgudqqjvvpxcefvvhovjtvimcfxyahzhjufbveqnxfcjanbwuocqnokcmrijtjgsrgaoxvsdqbfjwxtynzqmfunpdtmhkzqobmbhebbwqkkxwflsjibhbmzklyrwzjbfeaxzsrshcjhsfsjzvwdpeqbywcltjidcivhlzrheuzer"
+               value="ggwgjjirydcmanzormtuxtclqxqejcwssairnfcxxyxmkgrhnckacpgacmrunivysnekhgarsedvinimgtonyaoygumnvgodvsngbotrwvdfrrdnixwzpslxgynmnhvvpjhhtmsdldazfkofcferjqtkcspunahcpxwlrgpvlrddaadpyrgioyrtnufhgbt"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1019,7 +1019,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-register"
-               value="ut"
+               value="aut"
                data-component="body" hidden>
     <br>
 
@@ -1039,18 +1039,18 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/forgot-password" \
+    "http://nextwaveapi.communedebokito.com/api/forgot-password" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"pfranecki@example.net\"
+    \"email\": \"mcclure.maymie@example.net\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/forgot-password"
+    "http://nextwaveapi.communedebokito.com/api/forgot-password"
 );
 
 const headers = {
@@ -1059,7 +1059,7 @@ const headers = {
 };
 
 let body = {
-    "email": "pfranecki@example.net"
+    "email": "mcclure.maymie@example.net"
 };
 
 fetch(url, {
@@ -1072,14 +1072,14 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/forgot-password',
+    'http://nextwaveapi.communedebokito.com/api/forgot-password',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'pfranecki@example.net',
+            'email' =&gt; 'mcclure.maymie@example.net',
         ],
     ]
 );
@@ -1091,9 +1091,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/forgot-password'
+url = 'http://nextwaveapi.communedebokito.com/api/forgot-password'
 payload = {
-    "email": "pfranecki@example.net"
+    "email": "mcclure.maymie@example.net"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1152,7 +1152,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-forgot-password"
-               value="pfranecki@example.net"
+               value="mcclure.maymie@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1172,20 +1172,20 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/reset-password" \
+    "http://nextwaveapi.communedebokito.com/api/reset-password" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"token\": \"iure\",
-    \"email\": \"eglover@example.org\",
-    \"password\": \"quisquam\"
+    \"token\": \"incidunt\",
+    \"email\": \"keon24@example.net\",
+    \"password\": \"ea\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/reset-password"
+    "http://nextwaveapi.communedebokito.com/api/reset-password"
 );
 
 const headers = {
@@ -1194,9 +1194,9 @@ const headers = {
 };
 
 let body = {
-    "token": "iure",
-    "email": "eglover@example.org",
-    "password": "quisquam"
+    "token": "incidunt",
+    "email": "keon24@example.net",
+    "password": "ea"
 };
 
 fetch(url, {
@@ -1209,16 +1209,16 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/reset-password',
+    'http://nextwaveapi.communedebokito.com/api/reset-password',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'token' =&gt; 'iure',
-            'email' =&gt; 'eglover@example.org',
-            'password' =&gt; 'quisquam',
+            'token' =&gt; 'incidunt',
+            'email' =&gt; 'keon24@example.net',
+            'password' =&gt; 'ea',
         ],
     ]
 );
@@ -1230,11 +1230,11 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/reset-password'
+url = 'http://nextwaveapi.communedebokito.com/api/reset-password'
 payload = {
-    "token": "iure",
-    "email": "eglover@example.org",
-    "password": "quisquam"
+    "token": "incidunt",
+    "email": "keon24@example.net",
+    "password": "ea"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1293,7 +1293,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="token"
                data-endpoint="POSTapi-reset-password"
-               value="iure"
+               value="incidunt"
                data-component="body" hidden>
     <br>
 
@@ -1303,7 +1303,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-reset-password"
-               value="eglover@example.org"
+               value="keon24@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1313,7 +1313,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-reset-password"
-               value="quisquam"
+               value="ea"
                data-component="body" hidden>
     <br>
 
@@ -1334,22 +1334,22 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://127.0.0.1:8000/api/user-update-info" \
+    "http://nextwaveapi.communedebokito.com/api/user-update-info" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh\",
-    \"last_name\": \"toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot\",
-    \"first_name\": \"nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk\",
-    \"phone\": \"aiihykxmt\"
+    \"email\": \"raiursmwlnowadizcqzirsowxodgpeeoebkaxfhtltmxvadwyslskrsyvrcdggavrjzsgwtskeibsmhsnotcrsyflpkpfmjdqrvabhktlgjxbvmkntofpnayytcicdullwqdolmsslrotggtlnrmwdqcnrz\",
+    \"last_name\": \"wldliybeohytlgohajtdlxxeozlhiktbfbpkiscwaskztskhwgrcgckasrypzrmttdemmxqpzjlazjlnqgrckiqgtlfkdazwlsnxkdwygbmyrdrcmbxxjeqapphixrlshnewtyei\",
+    \"first_name\": \"iybhhijeqjvinrlkleonbikelwbcuqqsdzoqkgfdxgrfkpaeyvilulhluevtegavgnjqsegzseliuzjpsyhncucbwxgskvjqveafwuafpwsozfnjhetdhcaixzikqiiitqvupwqimmfgqhoqkdtszdkpgbadgsqoazgvribtjazbatwzdguwocruhthniljm\",
+    \"phone\": \"e\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/user-update-info"
+    "http://nextwaveapi.communedebokito.com/api/user-update-info"
 );
 
 const headers = {
@@ -1359,10 +1359,10 @@ const headers = {
 };
 
 let body = {
-    "email": "wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh",
-    "last_name": "toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot",
-    "first_name": "nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk",
-    "phone": "aiihykxmt"
+    "email": "raiursmwlnowadizcqzirsowxodgpeeoebkaxfhtltmxvadwyslskrsyvrcdggavrjzsgwtskeibsmhsnotcrsyflpkpfmjdqrvabhktlgjxbvmkntofpnayytcicdullwqdolmsslrotggtlnrmwdqcnrz",
+    "last_name": "wldliybeohytlgohajtdlxxeozlhiktbfbpkiscwaskztskhwgrcgckasrypzrmttdemmxqpzjlazjlnqgrckiqgtlfkdazwlsnxkdwygbmyrdrcmbxxjeqapphixrlshnewtyei",
+    "first_name": "iybhhijeqjvinrlkleonbikelwbcuqqsdzoqkgfdxgrfkpaeyvilulhluevtegavgnjqsegzseliuzjpsyhncucbwxgskvjqveafwuafpwsozfnjhetdhcaixzikqiiitqvupwqimmfgqhoqkdtszdkpgbadgsqoazgvribtjazbatwzdguwocruhthniljm",
+    "phone": "e"
 };
 
 fetch(url, {
@@ -1375,7 +1375,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'http://127.0.0.1:8000/api/user-update-info',
+    'http://nextwaveapi.communedebokito.com/api/user-update-info',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1383,10 +1383,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh',
-            'last_name' =&gt; 'toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot',
-            'first_name' =&gt; 'nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk',
-            'phone' =&gt; 'aiihykxmt',
+            'email' =&gt; 'raiursmwlnowadizcqzirsowxodgpeeoebkaxfhtltmxvadwyslskrsyvrcdggavrjzsgwtskeibsmhsnotcrsyflpkpfmjdqrvabhktlgjxbvmkntofpnayytcicdullwqdolmsslrotggtlnrmwdqcnrz',
+            'last_name' =&gt; 'wldliybeohytlgohajtdlxxeozlhiktbfbpkiscwaskztskhwgrcgckasrypzrmttdemmxqpzjlazjlnqgrckiqgtlfkdazwlsnxkdwygbmyrdrcmbxxjeqapphixrlshnewtyei',
+            'first_name' =&gt; 'iybhhijeqjvinrlkleonbikelwbcuqqsdzoqkgfdxgrfkpaeyvilulhluevtegavgnjqsegzseliuzjpsyhncucbwxgskvjqveafwuafpwsozfnjhetdhcaixzikqiiitqvupwqimmfgqhoqkdtszdkpgbadgsqoazgvribtjazbatwzdguwocruhthniljm',
+            'phone' =&gt; 'e',
         ],
     ]
 );
@@ -1398,12 +1398,12 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/user-update-info'
+url = 'http://nextwaveapi.communedebokito.com/api/user-update-info'
 payload = {
-    "email": "wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh",
-    "last_name": "toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot",
-    "first_name": "nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk",
-    "phone": "aiihykxmt"
+    "email": "raiursmwlnowadizcqzirsowxodgpeeoebkaxfhtltmxvadwyslskrsyvrcdggavrjzsgwtskeibsmhsnotcrsyflpkpfmjdqrvabhktlgjxbvmkntofpnayytcicdullwqdolmsslrotggtlnrmwdqcnrz",
+    "last_name": "wldliybeohytlgohajtdlxxeozlhiktbfbpkiscwaskztskhwgrcgckasrypzrmttdemmxqpzjlazjlnqgrckiqgtlfkdazwlsnxkdwygbmyrdrcmbxxjeqapphixrlshnewtyei",
+    "first_name": "iybhhijeqjvinrlkleonbikelwbcuqqsdzoqkgfdxgrfkpaeyvilulhluevtegavgnjqsegzseliuzjpsyhncucbwxgskvjqveafwuafpwsozfnjhetdhcaixzikqiiitqvupwqimmfgqhoqkdtszdkpgbadgsqoazgvribtjazbatwzdguwocruhthniljm",
+    "phone": "e"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1471,7 +1471,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-user-update-info"
-               value="wygntajdlttubfmoncqfzikcguytzvlhlblyesfvadejgrnltqhhrattetbxkydvgoalxnyfcunozmdlcioyndlshpkbkzbapsesbjthphhlh"
+               value="raiursmwlnowadizcqzirsowxodgpeeoebkaxfhtltmxvadwyslskrsyvrcdggavrjzsgwtskeibsmhsnotcrsyflpkpfmjdqrvabhktlgjxbvmkntofpnayytcicdullwqdolmsslrotggtlnrmwdqcnrz"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1481,7 +1481,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-user-update-info"
-               value="toynynojbziavqplzmmgweufsruqadvhlovouwtzdjqthtfilagpalexzfgjbgxxkpgyvxtllsvihathrcfjgjgvprdjxkeybjpot"
+               value="wldliybeohytlgohajtdlxxeozlhiktbfbpkiscwaskztskhwgrcgckasrypzrmttdemmxqpzjlazjlnqgrckiqgtlfkdazwlsnxkdwygbmyrdrcmbxxjeqapphixrlshnewtyei"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1491,7 +1491,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-user-update-info"
-               value="nqjyqpdjqngxfugeisznwxreczbyykunrpokandqukicuprfcugwtpk"
+               value="iybhhijeqjvinrlkleonbikelwbcuqqsdzoqkgfdxgrfkpaeyvilulhluevtegavgnjqsegzseliuzjpsyhncucbwxgskvjqveafwuafpwsozfnjhetdhcaixzikqiiitqvupwqimmfgqhoqkdtszdkpgbadgsqoazgvribtjazbatwzdguwocruhthniljm"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1501,7 +1501,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-user-update-info"
-               value="aiihykxmt"
+               value="e"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 11 characters.</p>
@@ -1542,16 +1542,16 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/change-avatar" \
+    "http://nextwaveapi.communedebokito.com/api/change-avatar" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "image=@C:\Users\hp\AppData\Local\Temp\php8E6F.tmp" </code></pre></div>
+    --form "image=@C:\Users\hp\AppData\Local\Temp\php92B7.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/change-avatar"
+    "http://nextwaveapi.communedebokito.com/api/change-avatar"
 );
 
 const headers = {
@@ -1573,7 +1573,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;put(
-    'http://127.0.0.1:8000/api/change-avatar',
+    'http://nextwaveapi.communedebokito.com/api/change-avatar',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -1583,7 +1583,7 @@ $response = $client-&gt;put(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php8E6F.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php92B7.tmp', 'r')
             ],
         ],
     ]
@@ -1596,9 +1596,9 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'http://127.0.0.1:8000/api/change-avatar'
+url = 'http://nextwaveapi.communedebokito.com/api/change-avatar'
 files = {
-  'image': open('C:\Users\hp\AppData\Local\Temp\php8E6F.tmp', 'rb')
+  'image': open('C:\Users\hp\AppData\Local\Temp\php92B7.tmp', 'rb')
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
