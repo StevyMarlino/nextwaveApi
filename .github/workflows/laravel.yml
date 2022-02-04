@@ -50,4 +50,4 @@ jobs:
           server: ftp.communedebokito.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: /public_html/nextwaveapi/
+          server-dir: /public_html/www/nextwaveapi
