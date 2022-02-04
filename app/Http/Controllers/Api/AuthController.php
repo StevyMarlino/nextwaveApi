@@ -10,6 +10,7 @@ use App\Services\User\UserCreate;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Validation\ValidationException;
 
 /**
@@ -39,7 +40,7 @@ class AuthController extends Controller
                 'message' => __('User Registered, Please Check our Mail'),
                 'user' => new UserResource($user),
                 'token' => $token->plainTextToken
-            ]
+            ],201
         );
 
     }
@@ -53,8 +54,14 @@ class AuthController extends Controller
      */
     public function login(LoginRequest $request)
     {
-        $request->authenticate();
+        if (!$this->InvalidCredential($request)) {
+            return response()->json([
+                'status' => false,
+                'message' => __('Invalid login credentials'),
+            ], 401);
+        }
 
+        $request->authenticate();
         $token = $request->user()->createToken('authtokensnextwave');
 
         return response()->json(
@@ -63,8 +70,18 @@ class AuthController extends Controller
                 'message' => __('You are Logged'),
                 'user' => new UserResource(Auth::user()),
                 'token' => $token->plainTextToken
-            ]
+            ],200
         );
+    }
+
+    private function InvalidCredential($request)
+    {
+        return Auth::attempt($request->only('email', 'password'));
+    }
+
+    private function emailIsVerified()
+    {
+        return Auth::user()->email_verified_at;
     }
 
     /**
@@ -79,7 +96,7 @@ class AuthController extends Controller
             [
                 'status' => true,
                 'message' => __('You Logged out')
-            ]
+            ],200
         );
 
     }
