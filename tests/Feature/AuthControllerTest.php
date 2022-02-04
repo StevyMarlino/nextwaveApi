@@ -61,7 +61,7 @@ class AuthControllerTest extends TestCase
         /**
          * Create a user
          */
-        $user = User::factory()->create($this->dataLogin());
+        User::factory()->create($this->dataLogin());
 
         /**
          * we send lose data
@@ -97,7 +97,7 @@ class AuthControllerTest extends TestCase
         /**
          * Create a user
          */
-        $user = User::factory()->create($this->dataLogin());
+        User::factory()->create($this->dataLogin());
 
         $payload = ['email' => 'stevymarlino@user.com', 'password' => 'password'];
 
