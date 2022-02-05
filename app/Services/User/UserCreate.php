@@ -17,7 +17,7 @@ class UserCreate
             'first_name' => $data['first_name'],
             'phone' => $data['phone'],
             'is_active' => true,
-            'image' => $data['image'],
+            'image' => isset($data['image']) ? $data['image'] : null ,
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

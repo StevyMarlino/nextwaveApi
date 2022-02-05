@@ -31,6 +31,7 @@ class RegisterRequest extends FormRequest
             'image' => 'nullable',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Password::defaults()],
+            'password_confirmation' => ['required', Password::defaults()],
         ];
     }
 }

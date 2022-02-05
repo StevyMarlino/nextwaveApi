@@ -57,14 +57,14 @@ endpoints:
         name: id
         description: 'The ID of the verify email.'
         required: true
-        example: pariatur
+        example: dolor
         type: string
         custom: []
       hash:
         name: hash
         description: ''
         required: true
-        example: harum
+        example: voluptatibus
         type: string
         custom: []
     queryParameters: []
@@ -124,14 +124,14 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: wiegand.aniyah@example.com
+        example: ckreiger@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: unde
+        example: in
         type: string
         custom: []
     responses: []
@@ -155,21 +155,21 @@ endpoints:
         name: last_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: axvetpjhzrqgpkphebcfjairamelmfigtcbzkhjboz
+        example: rxnqqvtfooguzfzfndafqtibzbzzddwjtbywofopixvmflcyzoynnebudpzlreztemqcqssrozfmfmmjbqzvnfvgrrefttnpqenffkgkgwdtwkqfckdlhsropuuiysntkoheoyzyamhifmsetcfotazxlvwztlvmtxenzzddsithnxhyketnpljgzzybudurmjkwkgpdrjhnhnasqerymajrlmgdakrynonwbwvpbmuekgnstespvxhixiwy
         type: string
         custom: []
       first_name:
         name: first_name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hwvgfhexzeqlxvcuswwafmnqwswowwfsantutzujlxidhuxrqmjpgcasamszrsdqzefpeimfvmwuoiypmfgdyljsc
+        example: oyhdtpbtgkrcmxqngnrrihtblydhoirlzgmglnenqhcgudxumrbovihoasesoqtvrlcbntjfmsuemahtyxwdtuoajastbfyxkzmegnrkhkvssjyjkvainjqzegzcpyxiwvtu
         type: string
         custom: []
       phone:
         name: phone
         description: 'Must not be greater than 12 characters.'
         required: true
-        example: ''
+        example: jqbueaajyloc
         type: string
         custom: []
       image:
@@ -183,14 +183,21 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: iccneeorzlzfcbmzqvkcrnwtephspizdtxwagqkygmsuneyiosxfltnzvxtwqfzsoarkvpkqiousmpdqmfwdguslueioyflrikpoyr
+        example: karcmhewcbmiyzxrnhjimzpmpthitnacyeiaygjvtpqukopegpswfvzmsolkkvapgpfqlnpuwqvuksjpkpckburuzmflodhzjjdocgrjytmnpozvyylouvcopewigqznwefhejafbqjciosqzpxmzevqzxkwzlysoksfejugdasajgglyxgllssbsahqsnxccrnmkqem
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: aut
+        example: nobis
+        type: string
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: ''
+        required: true
+        example: similique
         type: string
         custom: []
     responses: []
@@ -214,7 +221,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: alan.wuckert@example.org
+        example: kessler.mohamed@example.com
         type: string
         custom: []
     responses: []
@@ -238,21 +245,21 @@ endpoints:
         name: token
         description: ''
         required: true
-        example: possimus
+        example: pariatur
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: murazik.sanford@example.org
+        example: sim11@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: dicta
+        example: a
         type: string
         custom: []
     responses: []
@@ -277,28 +284,28 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: false
-        example: hxcqau
+        example: btqxlmmlplqmmhicwjkswuykizsnfbqqeziqkphg
         type: string
         custom: []
       last_name:
         name: last_name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: tvggrkscjooredzbglejkshheudfpkucezkemqjqaknyvwkuriqrlqnwttjnaeqjzxhgfllnopexigosgopvetbqzcpbfvrzkdonzmpnmfulzi
+        example: lsnuphkflinitiexjlgbcxyfvcudtkrerbjllpswlgdafvnwsejhgckysznscayleesrinnsxejwbdlwpdbzkmtkwsuaflyftbyixqshlwptmqduwazrzkiyjzrmrbpqkcjftuwxrvenuaemjhadczufhttromjtjokuwappv
         type: string
         custom: []
       first_name:
         name: first_name
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: mubrvfhbneyqnykpwetfnecfbjqnqkeewukslkcodrrmnwnzlxcvskqyzkdunnvwydytkawhlnxnwlfjtygduhacjurqmlzcayyaapaypfhacwmnhyfvdkbsvoqtwnnhdugdbwuysovprcrefjeilcyfdhcjhpunhlctyfqvebswegatxvjukpviswuozweh
+        example: iaimjcziombqlkadioroddpysxnvlmajocshtbeayyejpkgysetegvronftpvskvyvxdseqaghoqixowmgvhgnlrytyiwjuionsvnjolcjnbqusaebncqdtpcbahzgmpiztoaurbrhxirnaszkemdqgtukyzlrhgtmsckrhxbkxiundltekiwssieylkivi
         type: string
         custom: []
       phone:
         name: phone
         description: 'Must not be greater than 11 characters.'
         required: false
-        example: ncpfic
+        example: jzsndwgd
         type: string
         custom: []
       password:
