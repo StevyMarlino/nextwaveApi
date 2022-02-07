@@ -14,7 +14,7 @@ class UserCreate
     {
         return User::create([
             'last_name' => $data['last_name'],
-            'first_name' => $data['first_name'],
+            //'first_name' => $data['first_name'],
             'phone' => $data['phone'],
             'is_active' => true,
             'image' => isset($data['image']) ? $data['image'] : null ,
