@@ -82,6 +82,7 @@ class AuthControllerTest extends TestCase
 
     public function testRegister()
     {
+        $this->withoutExceptionHandling();
         $this->postJson('/api/register', $this->dataRegister())
             ->assertStatus(201)
             ->assertSessionHasNoErrors();
@@ -141,9 +142,9 @@ class AuthControllerTest extends TestCase
 
     private function dataRegister()
     {
-        return $payload = [
-            'first_name' => 'stevy',
-            'last_name' => 'joe',
+        return [
+            'last_name' => 'stevy',
+            //'first_name' => 'joe',
             'phone' => '237694480473',
             'email' => 'stevyjoe@gmail.com',
             'image' => '',
