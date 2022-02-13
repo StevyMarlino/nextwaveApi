@@ -13,7 +13,6 @@ class UserUpdateProfile
     {
         if (is_null($request['password'])) {
             $user->update([
-                'first_name' => $request['first_name'] ?? $user->first_name,
                 'last_name' => $request['last_name'] ?? $user->last_name,
                 'phone' => $request['phone'] ?? $user->phone,
             ]);
@@ -25,7 +24,6 @@ class UserUpdateProfile
                 ], 403);
             }
             $user->update([
-                'first_name' => $request['first_name'] ?? $user->first_name,
                 'last_name' => $request['last_name'] ?? $user->last_name,
                 'phone' => $request['phone'] ?? $user->phone,
                 'password' => Hash::make($request['password']),
