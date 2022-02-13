@@ -12,11 +12,13 @@ class ResetPasswordNotification extends Notification
     use Queueable;
 
     public $url;
+    public $otp;
 
     /**
      * Create a new notification instance.
      *
      * @param string $url
+     * @param $otp
      */
     public function __construct(string $url)
     {

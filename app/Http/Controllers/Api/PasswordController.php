@@ -5,16 +5,19 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\ForgotPasswordRequest;
 use App\Http\Requests\Auth\ResetPasswordRequest;
+use App\Mail\ResetPasswordWithOtp;
+use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Response;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Password as RulesPassword;
 use Illuminate\Validation\ValidationException;
 
 /**
@@ -32,22 +35,61 @@ class PasswordController extends Controller
      */
     public function forgotPassword(ForgotPasswordRequest $request)
     {
-        $status = Password::sendResetLink(
-            $request->only('email')
-        );
 
-        if ($status == Password::RESET_LINK_SENT) {
-            return response()->json(
-                [
-                    'status' => true,
-                    'message' => __($status),
-                ]
+        if ($request->device === 'mobile') {
+
+            $verify = User::where('email', $request->all()['email'])->exists();
+
+            if ($verify) {
+                $verify2 = DB::table('password_resets')->where([
+                    ['email', $request->email]
+                ]);
+
+                if ($verify2->exists()) {
+                    $verify2->delete();
+                }
+
+                $otp = random_int(100000, 999999);
+
+                $password_reset = DB::table('password_resets')->insert([
+                    'email' => $request->all()['email'],
+                    'otp' => $otp,
+                    'created_at' => Carbon::now()
+                ]);
+
+                if ($password_reset) {
+                    Mail::to($request->email)->send(new ResetPasswordWithOtp($otp));
+
+                    return new JsonResponse(
+                        [
+                            'success' => true,
+                            'message' => "Please check your email for a 6 digit code"
+                        ],
+                        200
+                    );
+                }
+            }
+        } else {
+
+            $status = Password::sendResetLink(
+                $request->only('email')
             );
+
+
+            if ($status == Password::RESET_LINK_SENT) {
+                return response()->json(
+                    [
+                        'status' => true,
+                        'message' => __($status),
+                    ]
+                );
+            }
+
+            throw ValidationException::withMessages([
+                'email' => [trans($status)],
+            ]);
         }
 
-        throw ValidationException::withMessages([
-            'email' => [trans($status)],
-        ]);
     }
 
 
@@ -59,53 +101,102 @@ class PasswordController extends Controller
     public function reset(ResetPasswordRequest $request)
     {
 
-        $status = Password::reset(
-            $request->only('email', 'password', 'password_confirmation', 'token'),
+        if ($request->device !== 'mobile') {
+            $status = Password::reset(
+                $request->only('email', 'password', 'token'),
 
-            function ($user) use ($request) {
-                $user->forceFill([
-                    'password' => Hash::make($request->password),
-                    'remember_token' => Str::random(60),
-                ])->save();
+                function ($user) use ($request) {
+                    $user->forceFill([
+                        'password' => Hash::make($request->password),
+                        'remember_token' => Str::random(60),
+                    ])->save();
 
-                $user->tokens()->delete();
+                    $user->tokens()->delete();
 
-                event(new PasswordReset($user));
+                    event(new PasswordReset($user));
+                }
+            );
+
+            if ($status == Password::PASSWORD_RESET) {
+                return response()->json([
+                    'status' => true,
+                    'message' => __($status)
+                ]);
             }
-        );
 
-        if ($status == Password::PASSWORD_RESET) {
             return response()->json([
-                'status' => true,
+                'status' => false,
                 'message' => __($status)
+            ], 500);
+
+        } else {
+
+            $request->only('email', 'password');
+
+            $user = User::where('email',$request->email);
+            $user->update([
+                'password'=>Hash::make($request->password),
+                'remember_token' => Str::random(60),
             ]);
+            
+                event(new PasswordReset($user));
+
+                return new JsonResponse(
+                    [
+                        'success' => true,
+                        'message' => "Your password has been reset",
+                    ],
+                    200
+                );
+
         }
-
-        return response()->json([
-            'status' => false,
-            'message' => __($status)
-        ], 500);
-
     }
 
-    public function postEmail(Request $request)
+    public function verifyOtp(Request $request)
     {
-        $request->validate([
-            'email' => 'required|email|exists:users',
+        $validator = Validator::make($request->all(), [
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'otp' => ['required'],
         ]);
 
-        $token = rand(4);
+        if ($validator->fails()) {
+            return new JsonResponse(
+                [
+                    'success' => false,
+                    'message' => $validator->errors()
+                ],
+                422);
+        }
 
-        DB::table('password_resets')->insert(
-            ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]
-        );
+        $check = DB::table('password_resets')->where([
+            ['email', $request->all()['email']],
+            ['otp', $request->all()['otp']],
+        ]);
 
-        Mail::send('customauth.verify', ['token' => $token], function($message) use($request){
-            $message->to($request->email);
-            $message->subject('Reset Password Notification');
-        });
+        if ($check->exists()) {
 
-        return back()->with('message', 'We have e-mailed your password reset link!');
+            DB::table('password_resets')->where([
+                ['email', $request->all()['email']],
+                ['token', $request->all()['otp']],
+            ])->delete();
+
+            return new JsonResponse(
+                [
+                    'success' => true,
+                    'message' => "You can now reset your password"
+                ],
+                200
+            );
+        } else {
+            return new JsonResponse(
+                [
+                    'success' => false,
+                    'message' => "Invalid otp"
+                ],
+                401
+            );
+        }
     }
+
 }
 
