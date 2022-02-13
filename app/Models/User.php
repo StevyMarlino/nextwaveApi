@@ -51,15 +51,6 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->is_active;
     }
 
-    public function region()
-    {
-        return $this->belongsTo(Region::class);
-    }
-
-    public function annonces()
-    {
-        return $this->HasMany(Annonce::class);
-    }
 
     public function sendPasswordResetNotification($token)
     {

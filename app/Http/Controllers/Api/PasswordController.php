@@ -10,7 +10,9 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
@@ -59,6 +61,7 @@ class PasswordController extends Controller
 
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
+
             function ($user) use ($request) {
                 $user->forceFill([
                     'password' => Hash::make($request->password),
@@ -85,5 +88,24 @@ class PasswordController extends Controller
 
     }
 
+    public function postEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+        ]);
 
+        $token = rand(4);
+
+        DB::table('password_resets')->insert(
+            ['email' => $request->email, 'token' => $token, 'created_at' => Carbon::now()]
+        );
+
+        Mail::send('customauth.verify', ['token' => $token], function($message) use($request){
+            $message->to($request->email);
+            $message->subject('Reset Password Notification');
+        });
+
+        return back()->with('message', 'We have e-mailed your password reset link!');
+    }
 }
+

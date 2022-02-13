@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Auth;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rules\Password as RulesPassword;
 
 class ResetPasswordRequest extends FormRequest
@@ -27,7 +29,19 @@ class ResetPasswordRequest extends FormRequest
         return [
             'token' => 'required',
             'email' => 'required|email',
-            'password' => ['required', 'confirmed', RulesPassword::defaults()],
+            'password' => ['required', RulesPassword::defaults()],
         ];
+    }
+
+    /**
+     * @param Validator $validator
+     */
+    public function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(response()->json([
+            'status'   => false,
+            'message'   => 'Validation errors',
+            'data'      => $validator->errors()
+        ],422));
     }
 }
