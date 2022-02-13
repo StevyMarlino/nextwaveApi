@@ -401,7 +401,7 @@ response.json()</code></pre></div>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://nextwaveapi.communedebokito.com/api/verify-email/quos/ullam" \
+    --get "https://nextwaveapi.communedebokito.com/api/verify-email/qui/consequuntur" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -409,7 +409,7 @@ response.json()</code></pre></div>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://nextwaveapi.communedebokito.com/api/verify-email/quos/ullam"
+    "https://nextwaveapi.communedebokito.com/api/verify-email/qui/consequuntur"
 );
 
 const headers = {
@@ -427,7 +427,7 @@ fetch(url, {
 <div class="php-example">
     <pre><code class="language-php">$client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://nextwaveapi.communedebokito.com/api/verify-email/quos/ullam',
+    'https://nextwaveapi.communedebokito.com/api/verify-email/qui/consequuntur',
     [
         'headers' =&gt; [
             'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
@@ -444,7 +444,7 @@ print_r(json_decode((string) $body));</code></pre></div>
     <pre><code class="language-python">import requests
 import json
 
-url = 'https://nextwaveapi.communedebokito.com/api/verify-email/quos/ullam'
+url = 'https://nextwaveapi.communedebokito.com/api/verify-email/qui/consequuntur'
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
   'Content-Type': 'application/json',
@@ -528,7 +528,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="id"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="quos"
+               value="qui"
                data-component="url" hidden>
     <br>
 <p>The ID of the verify email.</p>
@@ -538,7 +538,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="hash"
                data-endpoint="GETapi-verify-email--id---hash-"
-               value="ullam"
+               value="consequuntur"
                data-component="url" hidden>
     <br>
 
@@ -699,8 +699,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"xreichel@example.net\",
-    \"password\": \"et\"
+    \"email\": \"wparisian@example.net\",
+    \"password\": \"praesentium\"
 }"
 </code></pre></div>
 
@@ -716,8 +716,8 @@ const headers = {
 };
 
 let body = {
-    "email": "xreichel@example.net",
-    "password": "et"
+    "email": "wparisian@example.net",
+    "password": "praesentium"
 };
 
 fetch(url, {
@@ -737,8 +737,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'xreichel@example.net',
-            'password' =&gt; 'et',
+            'email' =&gt; 'wparisian@example.net',
+            'password' =&gt; 'praesentium',
         ],
     ]
 );
@@ -752,8 +752,8 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/login'
 payload = {
-    "email": "xreichel@example.net",
-    "password": "et"
+    "email": "wparisian@example.net",
+    "password": "praesentium"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -812,7 +812,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-login"
-               value="xreichel@example.net"
+               value="wparisian@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -822,7 +822,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-login"
-               value="et"
+               value="praesentium"
                data-component="body" hidden>
     <br>
 
@@ -846,10 +846,10 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"last_name\": \"xamabopbtjgldfjgfordippzkuoxwlwejtvzfwuztomvpnobicgbufxdsmuwlhzbgvkqomwliwuepovlwbkgaenvooxpgro\",
-    \"phone\": \"qu\",
-    \"email\": \"flbpcdpyepvslcgvxfeebsrprsluwzqhvhfvxliutnrzfihksaudrknafxzrnizgdvzdmazcnorrqobujaemyxgtdlnxbbwkymqguyn\",
-    \"password\": \"quasi\"
+    \"last_name\": \"tmpx\",
+    \"phone\": \"ffsyb\",
+    \"email\": \"pqibnptxcvlmrwbiojnfrkcdfzlnlswykm\",
+    \"password\": \"quia\"
 }"
 </code></pre></div>
 
@@ -865,10 +865,10 @@ const headers = {
 };
 
 let body = {
-    "last_name": "xamabopbtjgldfjgfordippzkuoxwlwejtvzfwuztomvpnobicgbufxdsmuwlhzbgvkqomwliwuepovlwbkgaenvooxpgro",
-    "phone": "qu",
-    "email": "flbpcdpyepvslcgvxfeebsrprsluwzqhvhfvxliutnrzfihksaudrknafxzrnizgdvzdmazcnorrqobujaemyxgtdlnxbbwkymqguyn",
-    "password": "quasi"
+    "last_name": "tmpx",
+    "phone": "ffsyb",
+    "email": "pqibnptxcvlmrwbiojnfrkcdfzlnlswykm",
+    "password": "quia"
 };
 
 fetch(url, {
@@ -888,10 +888,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'last_name' =&gt; 'xamabopbtjgldfjgfordippzkuoxwlwejtvzfwuztomvpnobicgbufxdsmuwlhzbgvkqomwliwuepovlwbkgaenvooxpgro',
-            'phone' =&gt; 'qu',
-            'email' =&gt; 'flbpcdpyepvslcgvxfeebsrprsluwzqhvhfvxliutnrzfihksaudrknafxzrnizgdvzdmazcnorrqobujaemyxgtdlnxbbwkymqguyn',
-            'password' =&gt; 'quasi',
+            'last_name' =&gt; 'tmpx',
+            'phone' =&gt; 'ffsyb',
+            'email' =&gt; 'pqibnptxcvlmrwbiojnfrkcdfzlnlswykm',
+            'password' =&gt; 'quia',
         ],
     ]
 );
@@ -905,10 +905,10 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/register'
 payload = {
-    "last_name": "xamabopbtjgldfjgfordippzkuoxwlwejtvzfwuztomvpnobicgbufxdsmuwlhzbgvkqomwliwuepovlwbkgaenvooxpgro",
-    "phone": "qu",
-    "email": "flbpcdpyepvslcgvxfeebsrprsluwzqhvhfvxliutnrzfihksaudrknafxzrnizgdvzdmazcnorrqobujaemyxgtdlnxbbwkymqguyn",
-    "password": "quasi"
+    "last_name": "tmpx",
+    "phone": "ffsyb",
+    "email": "pqibnptxcvlmrwbiojnfrkcdfzlnlswykm",
+    "password": "quia"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -967,7 +967,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-register"
-               value="xamabopbtjgldfjgfordippzkuoxwlwejtvzfwuztomvpnobicgbufxdsmuwlhzbgvkqomwliwuepovlwbkgaenvooxpgro"
+               value="tmpx"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -977,27 +977,17 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-register"
-               value="qu"
+               value="ffsyb"
                data-component="body" hidden>
     <br>
-<p>Must not be greater than 12 characters.</p>
-        </p>
-                <p>
-            <b><code>image</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-                <input type="text"
-               name="image"
-               data-endpoint="POSTapi-register"
-               value=""
-               data-component="body" hidden>
-    <br>
-
+<p>Must not be greater than 14 characters.</p>
         </p>
                 <p>
             <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-register"
-               value="flbpcdpyepvslcgvxfeebsrprsluwzqhvhfvxliutnrzfihksaudrknafxzrnizgdvzdmazcnorrqobujaemyxgtdlnxbbwkymqguyn"
+               value="pqibnptxcvlmrwbiojnfrkcdfzlnlswykm"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1007,7 +997,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-register"
-               value="quasi"
+               value="quia"
                data-component="body" hidden>
     <br>
 
@@ -1031,8 +1021,8 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"tpagac@example.net\",
-    \"device\": \"ex\"
+    \"email\": \"aroob@example.com\",
+    \"device\": \"vel\"
 }"
 </code></pre></div>
 
@@ -1048,8 +1038,8 @@ const headers = {
 };
 
 let body = {
-    "email": "tpagac@example.net",
-    "device": "ex"
+    "email": "aroob@example.com",
+    "device": "vel"
 };
 
 fetch(url, {
@@ -1069,8 +1059,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'tpagac@example.net',
-            'device' =&gt; 'ex',
+            'email' =&gt; 'aroob@example.com',
+            'device' =&gt; 'vel',
         ],
     ]
 );
@@ -1084,8 +1074,8 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/forgot-password'
 payload = {
-    "email": "tpagac@example.net",
-    "device": "ex"
+    "email": "aroob@example.com",
+    "device": "vel"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1144,7 +1134,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-forgot-password"
-               value="tpagac@example.net"
+               value="aroob@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1154,7 +1144,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="device"
                data-endpoint="POSTapi-forgot-password"
-               value="ex"
+               value="vel"
                data-component="body" hidden>
     <br>
 
@@ -1178,9 +1168,9 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"device\": \"sed\",
-    \"email\": \"myrtie.thiel@example.net\",
-    \"password\": \"et\"
+    \"device\": \"quisquam\",
+    \"email\": \"ufeest@example.com\",
+    \"password\": \"cum\"
 }"
 </code></pre></div>
 
@@ -1196,9 +1186,9 @@ const headers = {
 };
 
 let body = {
-    "device": "sed",
-    "email": "myrtie.thiel@example.net",
-    "password": "et"
+    "device": "quisquam",
+    "email": "ufeest@example.com",
+    "password": "cum"
 };
 
 fetch(url, {
@@ -1218,9 +1208,9 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'device' =&gt; 'sed',
-            'email' =&gt; 'myrtie.thiel@example.net',
-            'password' =&gt; 'et',
+            'device' =&gt; 'quisquam',
+            'email' =&gt; 'ufeest@example.com',
+            'password' =&gt; 'cum',
         ],
     ]
 );
@@ -1234,9 +1224,9 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/reset-password'
 payload = {
-    "device": "sed",
-    "email": "myrtie.thiel@example.net",
-    "password": "et"
+    "device": "quisquam",
+    "email": "ufeest@example.com",
+    "password": "cum"
 }
 headers = {
   'Content-Type': 'application/json',
@@ -1305,7 +1295,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="device"
                data-endpoint="POSTapi-reset-password"
-               value="sed"
+               value="quisquam"
                data-component="body" hidden>
     <br>
 
@@ -1315,7 +1305,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-reset-password"
-               value="myrtie.thiel@example.net"
+               value="ufeest@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -1325,7 +1315,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-reset-password"
-               value="et"
+               value="cum"
                data-component="body" hidden>
     <br>
 
@@ -1351,10 +1341,10 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"fbnseabnpmgacguxwejsbddmhwpesjyhyeeyjkhgezwrcugppzmtgvivsefxaenhmmuppizecfeokyltwjghis\",
-    \"last_name\": \"aayxwyzgcgtcutzfmtsuqmlyoydfucxvshrcltwjjhmnoyesrwhqnapcpwekghnokucstwgcnkcigmggimgudhsfnqlofhnbyfbsxdesteqnmlxnvssgvkpaexkbsxuodemjlnxpzyzmsknzskcahjmhysjbomdfhguqljliauhrhgvqosnscvnhmafhcukjrlicrgypttudiokrordlqnhzmoivclriomrulbwhdiqurrekoup\",
-    \"first_name\": \"hstnuerauhfctqcamplqiwitpyoqym\",
-    \"phone\": \"\"
+    \"email\": \"ymbgoyevxtqwnvavwnkysjhmyatzuaqhfuxzbieferiyzbwlvvunadhgfqkaimeleonsxonjkgkrchroeqfwjungonhgncjezphxdjljqbobxpyysnszbyqslmygwjygpxxmvnlejfsqchuzimdvuklstzizvpktlhghxgtmfevwbtnuqjommmtcjwidgmefciubpvclm\",
+    \"last_name\": \"mpeznembogkzrxzvtqfbkfaiuyqrcbdgrfwxosreqvhbuxlumh\",
+    \"first_name\": \"vzecoafsylqelreddyclcqgdnlnzgksenvurfsvqnkjbgea\",
+    \"phone\": \"qrzk\"
 }"
 </code></pre></div>
 
@@ -1371,10 +1361,10 @@ const headers = {
 };
 
 let body = {
-    "email": "fbnseabnpmgacguxwejsbddmhwpesjyhyeeyjkhgezwrcugppzmtgvivsefxaenhmmuppizecfeokyltwjghis",
-    "last_name": "aayxwyzgcgtcutzfmtsuqmlyoydfucxvshrcltwjjhmnoyesrwhqnapcpwekghnokucstwgcnkcigmggimgudhsfnqlofhnbyfbsxdesteqnmlxnvssgvkpaexkbsxuodemjlnxpzyzmsknzskcahjmhysjbomdfhguqljliauhrhgvqosnscvnhmafhcukjrlicrgypttudiokrordlqnhzmoivclriomrulbwhdiqurrekoup",
-    "first_name": "hstnuerauhfctqcamplqiwitpyoqym",
-    "phone": ""
+    "email": "ymbgoyevxtqwnvavwnkysjhmyatzuaqhfuxzbieferiyzbwlvvunadhgfqkaimeleonsxonjkgkrchroeqfwjungonhgncjezphxdjljqbobxpyysnszbyqslmygwjygpxxmvnlejfsqchuzimdvuklstzizvpktlhghxgtmfevwbtnuqjommmtcjwidgmefciubpvclm",
+    "last_name": "mpeznembogkzrxzvtqfbkfaiuyqrcbdgrfwxosreqvhbuxlumh",
+    "first_name": "vzecoafsylqelreddyclcqgdnlnzgksenvurfsvqnkjbgea",
+    "phone": "qrzk"
 };
 
 fetch(url, {
@@ -1395,10 +1385,10 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'fbnseabnpmgacguxwejsbddmhwpesjyhyeeyjkhgezwrcugppzmtgvivsefxaenhmmuppizecfeokyltwjghis',
-            'last_name' =&gt; 'aayxwyzgcgtcutzfmtsuqmlyoydfucxvshrcltwjjhmnoyesrwhqnapcpwekghnokucstwgcnkcigmggimgudhsfnqlofhnbyfbsxdesteqnmlxnvssgvkpaexkbsxuodemjlnxpzyzmsknzskcahjmhysjbomdfhguqljliauhrhgvqosnscvnhmafhcukjrlicrgypttudiokrordlqnhzmoivclriomrulbwhdiqurrekoup',
-            'first_name' =&gt; 'hstnuerauhfctqcamplqiwitpyoqym',
-            'phone' =&gt; '',
+            'email' =&gt; 'ymbgoyevxtqwnvavwnkysjhmyatzuaqhfuxzbieferiyzbwlvvunadhgfqkaimeleonsxonjkgkrchroeqfwjungonhgncjezphxdjljqbobxpyysnszbyqslmygwjygpxxmvnlejfsqchuzimdvuklstzizvpktlhghxgtmfevwbtnuqjommmtcjwidgmefciubpvclm',
+            'last_name' =&gt; 'mpeznembogkzrxzvtqfbkfaiuyqrcbdgrfwxosreqvhbuxlumh',
+            'first_name' =&gt; 'vzecoafsylqelreddyclcqgdnlnzgksenvurfsvqnkjbgea',
+            'phone' =&gt; 'qrzk',
         ],
     ]
 );
@@ -1412,10 +1402,10 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/user-update-info'
 payload = {
-    "email": "fbnseabnpmgacguxwejsbddmhwpesjyhyeeyjkhgezwrcugppzmtgvivsefxaenhmmuppizecfeokyltwjghis",
-    "last_name": "aayxwyzgcgtcutzfmtsuqmlyoydfucxvshrcltwjjhmnoyesrwhqnapcpwekghnokucstwgcnkcigmggimgudhsfnqlofhnbyfbsxdesteqnmlxnvssgvkpaexkbsxuodemjlnxpzyzmsknzskcahjmhysjbomdfhguqljliauhrhgvqosnscvnhmafhcukjrlicrgypttudiokrordlqnhzmoivclriomrulbwhdiqurrekoup",
-    "first_name": "hstnuerauhfctqcamplqiwitpyoqym",
-    "phone": ""
+    "email": "ymbgoyevxtqwnvavwnkysjhmyatzuaqhfuxzbieferiyzbwlvvunadhgfqkaimeleonsxonjkgkrchroeqfwjungonhgncjezphxdjljqbobxpyysnszbyqslmygwjygpxxmvnlejfsqchuzimdvuklstzizvpktlhghxgtmfevwbtnuqjommmtcjwidgmefciubpvclm",
+    "last_name": "mpeznembogkzrxzvtqfbkfaiuyqrcbdgrfwxosreqvhbuxlumh",
+    "first_name": "vzecoafsylqelreddyclcqgdnlnzgksenvurfsvqnkjbgea",
+    "phone": "qrzk"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1483,7 +1473,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-user-update-info"
-               value="fbnseabnpmgacguxwejsbddmhwpesjyhyeeyjkhgezwrcugppzmtgvivsefxaenhmmuppizecfeokyltwjghis"
+               value="ymbgoyevxtqwnvavwnkysjhmyatzuaqhfuxzbieferiyzbwlvvunadhgfqkaimeleonsxonjkgkrchroeqfwjungonhgncjezphxdjljqbobxpyysnszbyqslmygwjygpxxmvnlejfsqchuzimdvuklstzizvpktlhghxgtmfevwbtnuqjommmtcjwidgmefciubpvclm"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1493,7 +1483,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="last_name"
                data-endpoint="POSTapi-user-update-info"
-               value="aayxwyzgcgtcutzfmtsuqmlyoydfucxvshrcltwjjhmnoyesrwhqnapcpwekghnokucstwgcnkcigmggimgudhsfnqlofhnbyfbsxdesteqnmlxnvssgvkpaexkbsxuodemjlnxpzyzmsknzskcahjmhysjbomdfhguqljliauhrhgvqosnscvnhmafhcukjrlicrgypttudiokrordlqnhzmoivclriomrulbwhdiqurrekoup"
+               value="mpeznembogkzrxzvtqfbkfaiuyqrcbdgrfwxosreqvhbuxlumh"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1503,7 +1493,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="first_name"
                data-endpoint="POSTapi-user-update-info"
-               value="hstnuerauhfctqcamplqiwitpyoqym"
+               value="vzecoafsylqelreddyclcqgdnlnzgksenvurfsvqnkjbgea"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -1513,7 +1503,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="phone"
                data-endpoint="POSTapi-user-update-info"
-               value=""
+               value="qrzk"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 11 characters.</p>
@@ -1558,7 +1548,7 @@ response.json()</code></pre></div>
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "image=@C:\Users\hp\AppData\Local\Temp\php7333.tmp" </code></pre></div>
+    --form "image=@C:\Users\hp\AppData\Local\Temp\php98BB.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -1595,7 +1585,7 @@ $response = $client-&gt;put(
         'multipart' =&gt; [
             [
                 'name' =&gt; 'image',
-                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php7333.tmp', 'r')
+                'contents' =&gt; fopen('C:\Users\hp\AppData\Local\Temp\php98BB.tmp', 'r')
             ],
         ],
     ]
@@ -1610,7 +1600,7 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/change-avatar'
 files = {
-  'image': open('C:\Users\hp\AppData\Local\Temp\php7333.tmp', 'rb')
+  'image': open('C:\Users\hp\AppData\Local\Temp\php98BB.tmp', 'rb')
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1704,8 +1694,8 @@ response.json()</code></pre></div>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"jhizaiwsqkreiqljewpydmiepcncdukvtgoqyxybptmcsagqgqejmsxlrgnyxqhtfpfjjybovufpcmahevxdbjcta\",
-    \"otp\": \"voluptates\"
+    \"email\": \"wisndezkfnhshtsstorucauyzccxfrbnymcrgohtsppypqllfjcceumlvkdxdueagdjemiqdxkncjwrgkhueidedimvwkcgdiuxhyyjvmnwuautfmmcdj\",
+    \"otp\": \"odit\"
 }"
 </code></pre></div>
 
@@ -1722,8 +1712,8 @@ const headers = {
 };
 
 let body = {
-    "email": "jhizaiwsqkreiqljewpydmiepcncdukvtgoqyxybptmcsagqgqejmsxlrgnyxqhtfpfjjybovufpcmahevxdbjcta",
-    "otp": "voluptates"
+    "email": "wisndezkfnhshtsstorucauyzccxfrbnymcrgohtsppypqllfjcceumlvkdxdueagdjemiqdxkncjwrgkhueidedimvwkcgdiuxhyyjvmnwuautfmmcdj",
+    "otp": "odit"
 };
 
 fetch(url, {
@@ -1744,8 +1734,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'jhizaiwsqkreiqljewpydmiepcncdukvtgoqyxybptmcsagqgqejmsxlrgnyxqhtfpfjjybovufpcmahevxdbjcta',
-            'otp' =&gt; 'voluptates',
+            'email' =&gt; 'wisndezkfnhshtsstorucauyzccxfrbnymcrgohtsppypqllfjcceumlvkdxdueagdjemiqdxkncjwrgkhueidedimvwkcgdiuxhyyjvmnwuautfmmcdj',
+            'otp' =&gt; 'odit',
         ],
     ]
 );
@@ -1759,8 +1749,8 @@ import json
 
 url = 'https://nextwaveapi.communedebokito.com/api/verify-otp'
 payload = {
-    "email": "jhizaiwsqkreiqljewpydmiepcncdukvtgoqyxybptmcsagqgqejmsxlrgnyxqhtfpfjjybovufpcmahevxdbjcta",
-    "otp": "voluptates"
+    "email": "wisndezkfnhshtsstorucauyzccxfrbnymcrgohtsppypqllfjcceumlvkdxdueagdjemiqdxkncjwrgkhueidedimvwkcgdiuxhyyjvmnwuautfmmcdj",
+    "otp": "odit"
 }
 headers = {
   'Authorization': 'Bearer {YOUR_AUTH_KEY}',
@@ -1828,7 +1818,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-verify-otp"
-               value="jhizaiwsqkreiqljewpydmiepcncdukvtgoqyxybptmcsagqgqejmsxlrgnyxqhtfpfjjybovufpcmahevxdbjcta"
+               value="wisndezkfnhshtsstorucauyzccxfrbnymcrgohtsppypqllfjcceumlvkdxdueagdjemiqdxkncjwrgkhueidedimvwkcgdiuxhyyjvmnwuautfmmcdj"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address. Must not be greater than 255 characters.</p>
@@ -1838,7 +1828,7 @@ response.json()</code></pre></div>
                 <input type="text"
                name="otp"
                data-endpoint="POSTapi-verify-otp"
-               value="voluptates"
+               value="odit"
                data-component="body" hidden>
     <br>
 

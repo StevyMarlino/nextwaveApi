@@ -33,7 +33,7 @@ class RegisterRequest extends FormRequest
         return [
             'last_name' => 'required|string|max:255',
             'phone' => 'required|string|max:14',
-            'image' => '',
+            //'image' => '',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', Password::defaults()],
         ];

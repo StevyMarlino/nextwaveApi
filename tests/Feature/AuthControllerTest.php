@@ -146,9 +146,7 @@ class AuthControllerTest extends TestCase
             'last_name' => 'stevy',
             'phone' => '237694480473',
             'email' => 'stevyjoe@gmail.com',
-            'image' => '',
             'password' => 'password',
-
         ];
     }
 }
