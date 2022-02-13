@@ -144,12 +144,10 @@ class AuthControllerTest extends TestCase
     {
         return [
             'last_name' => 'stevy',
-            //'first_name' => 'joe',
             'phone' => '237694480473',
             'email' => 'stevyjoe@gmail.com',
             'image' => '',
             'password' => 'password',
-            'password_confirmation' => 'password'
 
         ];
     }
