@@ -138,7 +138,7 @@ class PasswordController extends Controller
                 'password'=>Hash::make($request->password),
                 'remember_token' => Str::random(60),
             ]);
-            
+
                 event(new PasswordReset($user));
 
                 return new JsonResponse(
