@@ -3,8 +3,6 @@ name: Test & Deploy
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   laravel-tests:
@@ -45,7 +43,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ftp.communedebokito.com
           username: ${{ secrets.ftp_username }}
