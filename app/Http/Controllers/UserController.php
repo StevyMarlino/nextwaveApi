@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\checkExistingMailRequest;
 use App\Http\Requests\User\UserUpdateAvatarRequest;
 use App\Http\Requests\User\UserUpdateRequest;
 use App\Http\Resources\UserResource;
+use App\Models\User;
 use App\Services\User\UserSetImage;
 use App\Services\User\UserUpdateProfile;
 use Illuminate\Http\JsonResponse;
@@ -102,5 +104,15 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function checkExistEmail(checkExistingMailRequest $request)
+    {
+        $exist = User::whereEmail($request->email)->exists();
+        
+        return response()->json([
+            'status' => $exist,
+            'message' => $exist ? 'Email is already exist' : 'Email is not taken'
+        ]);
     }
 }

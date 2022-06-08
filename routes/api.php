@@ -34,3 +34,4 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('forgot-password', [PasswordController::class, 'forgotPassword']);
 Route::post('verify-otp', [PasswordController::class, 'verifyOtp']);
 Route::post('reset-password', [PasswordController::class, 'reset']);
+Route::post('/check-exist-email',[\App\Http\Controllers\UserController::class,'checkExistEmail']);
